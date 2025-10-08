@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps { git 'https://github.com/your-username/your-repo.git' }
+            steps {    git branch: 'main', url: 'https://github.com/Gayathri7841/automated-testing-platform.git' }
         }
         stage('Test') {
             steps {
