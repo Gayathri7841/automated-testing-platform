@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            steps {    git branch: 'main', url: 'https://github.com/Gayathri7841/automated-testing-platform.git' }
+            steps {     git branch: 'main',
+            credentialsId: 'github-creds',
+            url: 'https://github.com/Gayathri7841/automated-testing-platform.git' }
         }
         stage('Test') {
             steps {
